@@ -53,14 +53,15 @@ const Navbar = () => {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <a href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+            <Link to="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">NetServe</span>
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
-            </a>
+            </Link>
+            {/* <span className="ml-1.5 text-lg font-medium">NetServe</span> */}
           </div>
           <div className="flex lg:hidden">
             <button
