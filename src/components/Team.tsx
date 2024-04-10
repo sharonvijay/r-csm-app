@@ -162,7 +162,7 @@ const Team = () => {
             <div
             className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div className="relative overflow-hidden bg-cover bg-no-repeat">
-              <img src="team_member_4.jpeg" className="w-full rounded-t-lg" />
+              <img src="team_member_4.jpeg" className="w-full rounded-t-lg" alt="Aryan Atul"/>
               <a href="#!">
                 <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"></div>
               </a>
