@@ -84,6 +84,7 @@ const LoginComponent = () => {
                   type="email"
                   placeholder="Email"
                   value={email}
+                  className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
@@ -94,6 +95,7 @@ const LoginComponent = () => {
                   type="password"
                   placeholder="Password"
                   value={password}
+                  className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
