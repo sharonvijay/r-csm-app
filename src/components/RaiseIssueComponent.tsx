@@ -13,9 +13,12 @@ const RaiseIssueComponent = () => {
       setUserId(parseInt(userIdFromStorage, 10));
     }
   }, []);
+  const isButtonDisabled = userId === 0;
 
   const raiseIssue = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isButtonDisabled) return;
+
     try {
       const issue: RaiseIssue = { userId: userId, issueName: issueName };
 
@@ -159,13 +162,25 @@ const RaiseIssueComponent = () => {
               </select>
               <button
                 type="submit"
-                className="mt-4 w-full rounded-lg border border-blue-700 bg-blue-700 p-3 text-center font-medium text-white outline-none transition focus:ring hover:border-blue-700 hover:bg-blue-600 hover:text-white"
+                disabled={isButtonDisabled}
+                className={`mt-4 w-full rounded-lg border p-3 text-center font-medium transition focus:ring ${
+                  isButtonDisabled
+                    ? "border-gray-400 bg-gray-400 text-white cursor-not-allowed"
+                    : "border-blue-700 bg-blue-700 text-white hover:border-blue-700 hover:bg-blue-600 hover:text-white"
+                }`}
               >
-                Submit
+                {isButtonDisabled ? "Sign In to Raise Issue" : "Submit"}
               </button>
+              {isButtonDisabled && (
+                <p className="mt-2 text-center text-gray-500">
+                  Please sign in to raise an issue.
+                </p>
+              )}
             </form>
-            {successMessage && (
-              <div className="text-green-600 mt-2">{successMessage}</div>
+            {!isButtonDisabled && successMessage && (
+              <div className="mt-2 text-center text-green-600">
+                {successMessage}
+              </div>
             )}
           </div>
         </div>
