@@ -172,7 +172,7 @@ const RaiseIssueComponent = () => {
                 {isButtonDisabled ? "Sign In to Raise Issue" : "Submit"}
               </button>
               {isButtonDisabled && (
-                <p className="mt-2 text-center text-gray-500">
+                <p className="mt-2 login-message text-center">
                   Please sign in to raise an issue.
                 </p>
               )}
