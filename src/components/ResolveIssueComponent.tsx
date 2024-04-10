@@ -58,7 +58,7 @@ const ResolveIssueComponent = () => {
                 <div className="mx-auto max-w-2xl lg:text-center"></div>
                 <div className="container">
                     <h3 className="status-heading">Admin Resolve Issue</h3>
-                    <table className="status-table">
+                    <table className="status-table border border-gray-100 shadow-gray-500/20 shadow-sm sm:rounded-lg sm:shadow-lg">
                         <thead>
                             <tr>
                                 <th>ID</th>

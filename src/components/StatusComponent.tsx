@@ -70,7 +70,7 @@ const StatusComponent = () => {
               <div className="login-message">Login to view your issue status</div>
             ) : (
               data.length > 0 ? (
-                <table className="status-table">
+                <table className="status-table border border-gray-100 shadow-gray-500/20 shadow-sm sm:rounded-lg sm:shadow-lg">
                   <thead>
                     <tr>
                       <th>ID</th>
