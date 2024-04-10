@@ -8,19 +8,10 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    updateLoginStatus();
-  }, []);
-
-  const updateLoginStatus = () => {
     const userId = localStorage.getItem("userId");
     setLoggedIn(!!userId);
-    if (userId) {
-      checkAdminStatus(userId);
-    }
-  };
-
-  const checkAdminStatus = (userId:string) => {
-    axios
+    if(userId){
+      axios
       .get(`http://localhost:6060/registration/api/isAdmin/${userId}`)
       .then((response) => {
         setIsAdmin(response.data);
@@ -29,7 +20,10 @@ const Navbar = () => {
       .catch((error) => {
         console.error("Error checking admin status:", error);
       });
-  };
+    }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
 
   const updateDefaultStatus = () => {
     setDefaultStatus(!defaultStatus);
@@ -37,7 +31,8 @@ const Navbar = () => {
 
   const logout = () => {
     localStorage.clear();
-    updateLoginStatus();
+    setLoggedIn(false);
+    setIsAdmin(false);
     updateDefaultStatus();
 
     setTimeout(() => {
