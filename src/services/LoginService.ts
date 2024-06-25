@@ -1,9 +1,8 @@
 import axios from "axios";
-import { Admin } from "../models/Admin";
 import { LoginUser } from "../models/LoginUser";
 import { LoginAdmin } from "../models/LoginAdmin";
 const baseUrl =
-	"https://registration-service-10082976201.development.catalystappsail.com/api";
+	"https://regist-serve-10082995091.development.catalystappsail.com/api";
 
 const loginService = {
 	loginUser: async (user: LoginUser) => {
