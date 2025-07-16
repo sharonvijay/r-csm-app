@@ -8,7 +8,12 @@ const loginService = {
 	loginUser: async (user: LoginUser) => {
 		const loginUserUrl = `${baseUrl}/loginUser`;
 		try {
-			const response = await axios.post(loginUserUrl, user);
+			const response = await axios.post(loginUserUrl, user, {
+				withCredentials: true,
+				headers: {
+					"Content-Type": "application/json",
+				},
+			});
 			return response.data;
 		} catch (error) {
 			throw error;
@@ -18,7 +23,12 @@ const loginService = {
 	loginAdmin: async (admin: LoginAdmin) => {
 		const loginAdminUrl = `${baseUrl}/loginAdmin`;
 		try {
-			const response = await axios.post(loginAdminUrl, admin);
+			const response = await axios.post(loginAdminUrl, admin, {
+				withCredentials: true,
+				headers: {
+					"Content-Type": "application/json",
+				},
+			});
 			return response.data;
 		} catch (error) {
 			throw error;
