@@ -2,7 +2,7 @@ import axios from "axios";
 import { User } from "../models/User";
 
 const baseUrl =
-	"https://regist-serve-10082995091.development.catalystappsail.com/api";
+	"https://regist-serve-10082995091.development.catalystappsail.com/registration/api";
 const registrationUrl = `${baseUrl}/addUser`;
 
 const registrationService = {

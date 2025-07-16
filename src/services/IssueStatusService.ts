@@ -4,7 +4,7 @@ const baseUrl =
 	"https://raiseissue-service-10082978854.development.catalystappsail.com/api";
 const UserIssuestatusUrl = `${baseUrl}/getAllUserIssues`;
 const AdminIssuestatusUrl =
-	"https://resolveissue-service-10082980932.development.catalystappsail.com/api/getAllIssues";
+	"https://resolveissue-service-10082980932.development.catalystappsail.com/resolveIssue/api/getAllIssues";
 
 const issueStatusService = {
 	UserIssueStatus: async (userId: string) => {

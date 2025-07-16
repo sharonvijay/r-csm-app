@@ -19,7 +19,7 @@ const StatusComponent = () => {
 			} else {
 				try {
 					const response = await axios.get(
-						`https://registration-service-10082976201.development.catalystappsail.com/api/isAdmin/${userId}`
+						`https://regist-serve-10082995091.development.catalystappsail.com/registration/api/isAdmin/${userId}`
 					);
 					setIsAdmin(response.data);
 					console.log("Admin status: " + response.data);

@@ -4,7 +4,7 @@ import { AcceptIssue } from "../models/AcceptIssue";
 import { ResolveIssue } from "../models/ResolveIssue";
 
 const baseUrl =
-	"https://resolveissue-service-10082980932.development.catalystappsail.com/api";
+	"https://resolveissue-service-10082980932.development.catalystappsail.com/resolveIssue/api";
 const getALlIssuesUrl = `${baseUrl}/getAllIssues`;
 const resolveIssueUrl = `${baseUrl}/resolveIssue`;
 const acceptIssueUrl = `${baseUrl}/acceptIssue`;

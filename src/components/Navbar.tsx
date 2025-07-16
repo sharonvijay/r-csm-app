@@ -13,7 +13,7 @@ const Navbar = () => {
 		if (userId) {
 			axios
 				.get(
-					`https://registration-service-10082976201.development.catalystappsail.com/api/isAdmin/${userId}`
+					`https://regist-serve-10082995091.development.catalystappsail.com/registration/api/isAdmin/${userId}`
 				)
 				.then((response) => {
 					setIsAdmin(response.data);

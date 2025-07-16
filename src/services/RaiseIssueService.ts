@@ -2,7 +2,7 @@ import axios from "axios";
 import { RaiseIssue } from "../models/RaiseIssue";
 
 const baseUrl =
-	"https://raiseissue-service-10082978854.development.catalystappsail.com/api";
+	"https://raiseissue-service-10082978854.development.catalystappsail.com/raiseIssue/api";
 const raiseIssueUrl = `${baseUrl}/createIssue`;
 
 const raiseIssueService = {
